@@ -16,7 +16,7 @@ while True:
     # time.sleep(t) is used to give a break of 
     # specified time t seconds so that its not 
     # too frequent
-    time.sleep(25)
+    time.sleep(45)
   
     # This for loop is used to move the mouse 
     # pointer to 500 pixels in this case(5*100)
