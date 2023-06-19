@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE TaskResult PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<TaskResult completed="1687056824070" completionStatus="Success" host="Amodi" launched="1687056813074" launcher="spadmin" name="HR - Account Aggregation" partitioned="true" runLength="10" runLengthAverage="10" schedule="6a80416b58774da2b5ad5f310b8d3d91" type="AccountAggregation">
+  <Attributes>
+    <Map>
+      <entry key="internalStartDate">
+        <value>
+          <Date>1687056813374</Date>
+        </value>
+      </entry>
+      <entry key="taskResultPartitions">
+        <value>
+          <List>
+            <TaskResult completed="1687056817406" completionStatus="Success" host="Amodi" launched="1687056817322" name="Partitioning">
+              <Attributes>
+                <Map>
+                  <entry key="internalUpdates" value="1"/>
+                </Map>
+              </Attributes>
+            </TaskResult>
+            <TaskResult completed="1687056818960" completionStatus="Success" host="Amodi" launched="1687056817446" name="HR-Contractor - Accounts 1 to 72">
+              <Attributes>
+                <Map>
+                  <entry key="applications" value="HR-Contractor"/>
+                  <entry key="internalUpdates" value="1"/>
+                  <entry key="optimized" value="72"/>
+                  <entry key="total" value="72"/>
+                </Map>
+              </Attributes>
+              <Progress>Beginning account scan on application: HR-Contractor</Progress>
+            </TaskResult>
+            <TaskResult completed="1687056820647" completionStatus="Success" host="Amodi" launched="1687056818992" name="HR-Employee - Accounts 1 to 157">
+              <Attributes>
+                <Map>
+                  <entry key="applications" value="HR-Employee"/>
+                  <entry key="internalUpdates" value="2"/>
+                  <entry key="optimized" value="157"/>
+                  <entry key="total" value="157"/>
+                </Map>
+              </Attributes>
+              <Progress>Beginning account scan on application: HR-Employee</Progress>
+            </TaskResult>
+            <TaskResult completed="1687056821806" completionStatus="Success" host="Amodi" launched="1687056820685" name="Check Deleted Objects - HR-Contractor">
+              <Attributes>
+                <Map>
+                  <entry key="applications" value="HR-Contractor"/>
+                  <entry key="internalUpdates" value="1"/>
+                </Map>
+              </Attributes>
+              <Progress>Pruning deleted account links for app [HR-Contractor]</Progress>
+            </TaskResult>
+            <TaskResult completed="1687056822941" completionStatus="Success" host="Amodi" launched="1687056821838" name="Check Deleted Objects - HR-Employee">
+              <Attributes>
+                <Map>
+                  <entry key="applications" value="HR-Employee"/>
+                  <entry key="internalUpdates" value="1"/>
+                </Map>
+              </Attributes>
+              <Progress>Pruning deleted account links for app [HR-Employee]</Progress>
+            </TaskResult>
+            <TaskResult completed="1687056824070" completionStatus="Success" host="Amodi" launched="1687056822966" name="Finish Aggregation">
+              <Attributes>
+                <Map>
+                  <entry key="applications" value="HR-Contractor, HR-Employee"/>
+                  <entry key="internalUpdates" value="1"/>
+                </Map>
+              </Attributes>
+              <Progress>Aggregation complete</Progress>
+            </TaskResult>
+          </List>
+        </value>
+      </entry>
+    </Map>
+  </Attributes>
+  <Definition>
+    <Reference class="sailpoint.object.TaskDefinition" name="HR - Account Aggregation"/>
+  </Definition>
+  <Owner>
+    <Reference class="sailpoint.object.Identity" name="spadmin"/>
+  </Owner>
+</TaskResult>

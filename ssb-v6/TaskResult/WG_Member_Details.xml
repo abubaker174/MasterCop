@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE TaskResult PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<TaskResult completed="1687056767133" completionStatus="Success" host="Amodi" launched="1687056762913" launcher="spadmin" name="WG Member Details" percentComplete="100" runLength="4" schedule="ae149b09a3c441b28ea0b8a4aca15a57" type="LiveReport">
+  <Definition>
+    <Reference class="sailpoint.object.TaskDefinition" name="WG Member Details"/>
+  </Definition>
+  <Owner>
+    <Reference class="sailpoint.object.Identity" name="spadmin"/>
+  </Owner>
+  <Report>
+    <Reference class="sailpoint.object.JasperResult"/>
+  </Report>
+</TaskResult>

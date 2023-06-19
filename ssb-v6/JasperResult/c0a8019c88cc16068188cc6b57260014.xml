@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE JasperResult PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<JasperResult handlerPageCount="-1" pageCount="-1" pagesPerBucket="-1">
+  <Attributes>
+    <Map>
+      <entry key="csvRowsPerBucket">
+        <value>
+          <Integer>1000</Integer>
+        </value>
+      </entry>
+      <entry key="header">
+        <value>
+          <LiveReportSummary title="User Details Report">
+            <Values>
+              <LiveReportSummaryValue label="Creator" name="creator">
+                <Value>
+                  <String>spadmin</String>
+                </Value>
+              </LiveReportSummaryValue>
+              <LiveReportSummaryValue label="Creation Date" name="date">
+                <Value>
+                  <String>6/17/23 9:52 PM</String>
+                </Value>
+              </LiveReportSummaryValue>
+            </Values>
+          </LiveReportSummary>
+        </value>
+      </entry>
+      <entry key="reportDefinition">
+        <value>
+          <LiveReport title="User Details Report">
+            <DataSource defaultSort="name" objectType="Identity" type="Filter">
+              <QueryParameters>
+                <Parameter argument="queryFilter">
+                  <QueryScript>
+                    <Source><![CDATA[
+                            import sailpoint.object.*;
+                            import java.lang.*;
+                      
+                      Filter f = Filter.eq("workgroup",true);
+                                 queryOptions.addFilter(f);                   
+                      
+                      
+                            return queryOptions;
+                          ]]></Source>
+                  </QueryScript>
+                </Parameter>
+              </QueryParameters>
+            </DataSource>
+            <ReportForm>
+              <Reference class="sailpoint.object.Form" name="Report Form Skeleton"/>
+            </ReportForm>
+            <Columns>
+              <ReportColumnConfig field="Workgroup" header="Workgroup" property="name" sortable="true" width="183"/>
+              <ReportColumnConfig field="members" header="Members" property="id" width="183">
+                <RenderScript>
+                  <Source><![CDATA[                    
+                    import sailpoint.object.*;
+					import java.util.*;
+                          
+                    				
+					List wgs = new ArrayList();
+               
+                    List props = new ArrayList();
+					props.add("name");
+					
+					QueryOptions qo = new QueryOptions();
+   
+					  qo.addFilter(Filter.eq("workgroups.id", value));
+					  Iterator entIter = context.search(Identity.class, qo);
+					  
+					  while(entIter.hasNext()){							
+					  Identity wg = (Identity)entIter.next();
+					  System.out.println(" wg name : "+wg.getName());
+					  wgs.add(wg.getName());
+					  }
+								  
+					return wgs;	  
+                          
+                        ]]></Source>
+                </RenderScript>
+              </ReportColumnConfig>
+              <ReportColumnConfig field="modified" header="Modified" property="modified" sortable="true" width="183"/>
+              <ReportColumnConfig field="capablities" header="Capabilities" property="name" sortable="true" width="183">
+                <RenderScript>
+                  <Source><![CDATA[
+				import sailpoint.object.Identity;
+				import sailpoint.object.Capability;
+				Identity wg = context.getObjectByName(Identity.class, value);
+				String cap = "";
+				List cps = wg.getCapabilities();
+				for(Capability cp : cps) {
+				if(cap.isEmpty())
+				  cap += cp.getDisplayName();
+				else
+				  cap += ", " + cap.getDisplayName();
+				}
+				return cap;
+			   ]]></Source>
+                </RenderScript>
+              </ReportColumnConfig>
+            </Columns>
+            <ReportHeader title="User Details Report">
+              <Values>
+                <LiveReportSummaryValue label="Creator" name="creator">
+                  <Value>
+                    <String>spadmin</String>
+                  </Value>
+                </LiveReportSummaryValue>
+                <LiveReportSummaryValue label="Creation Date" name="date">
+                  <Value>
+                    <String>6/17/23 9:52 PM</String>
+                  </Value>
+                </LiveReportSummaryValue>
+              </Values>
+            </ReportHeader>
+          </LiveReport>
+        </value>
+      </entry>
+      <entry key="reportRowCount">
+        <value>
+          <Integer>4</Integer>
+        </value>
+      </entry>
+    </Map>
+  </Attributes>
+  <Files>
+    <Reference class="sailpoint.object.PersistedFile" name="WG Member Details.pdf"/>
+    <Reference class="sailpoint.object.PersistedFile" name="WG Member Details.csv"/>
+  </Files>
+</JasperResult>
