@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE TaskResult PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<TaskResult host="Amodi" launched="1687137220701" launcher="spadmin" live="true" name="Export Objects" runLengthAverage="18" schedule="dfe0ca1166d941f6b2afecfc1d71d2cc" type="Generic">
+  <Definition>
+    <Reference class="sailpoint.object.TaskDefinition" name="Export Objects"/>
+  </Definition>
+  <Owner>
+    <Reference class="sailpoint.object.Identity" name="spadmin"/>
+  </Owner>
+  <Progress>Exporting class ServiceDefinition</Progress>
+</TaskResult>

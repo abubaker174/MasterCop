@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE TaskResult PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<TaskResult completed="1687063687974" completionStatus="Success" host="Amodi" launched="1687063679281" launcher="spadmin" name="Export Objects - 2" runLength="8" runLengthAverage="15" runLengthDeviation="-46" schedule="bc52e1472cef4618abcd9eb6df54113b" type="Generic">
+  <Attributes>
+    <Map>
+      <entry key="exportDetails" value="Application: 2, ApplicationScorecard: 2, AuditConfig: 1, AuditEvent: 11, AuthenticationQuestion: 7, Capability: 39, CertificationDefinition: 1, Configuration: 11, DatabaseVersion: 1, Dictionary: 1, DynamicScope: 4, EmailTemplate: 63, Form: 56, FullTextIndex: 1, Identity: 230, IdentityTrigger: 7, JasperResult: 1, JasperTemplate: 97, MessageTemplate: 1, MonitoringStatistic: 8, ObjectConfig: 8, PasswordPolicy: 1, Policy: 7, QuickLink: 16, RequestDefinition: 23, RightConfig: 1, Rule: 33, RuleRegistry: 1, ScoreConfig: 1, SPRight: 196, ServerStatistic: 308, ServiceDefinition: 9, Server: 1, SyslogEvent: 253, TaskDefinition: 129, TaskResult: 10, TaskSchedule: 6, TimePeriod: 9, UIConfig: 1, UIPreferences: 1, Widget: 7, Workflow: 41, WorkflowRegistry: 1, Workgroup: 4"/>
+      <entry key="objectsExported">
+        <value>
+          <Integer>1611</Integer>
+        </value>
+      </entry>
+    </Map>
+  </Attributes>
+  <Definition>
+    <Reference class="sailpoint.object.TaskDefinition" name="Export Objects"/>
+  </Definition>
+  <Owner>
+    <Reference class="sailpoint.object.Identity" name="spadmin"/>
+  </Owner>
+</TaskResult>

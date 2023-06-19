@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE Identity PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<Identity correlated="true" lastRefresh="1684719925994" name="Chris.Greene" needsRefresh="true" password="1:ACP:JuKlFfHBvRGwEzdRQVS9Ep70+tkylP+zP33PA8PPAbs=">
+  <Attributes>
+    <Map>
+      <entry key="displayName" value="Chris.Greene"/>
+    </Map>
+  </Attributes>
+  <Links>
+    <Link displayName="Chris.Greene" identity="1c2b3a4c" lastRefresh="1687056813374">
+      <ApplicationRef>
+        <Reference class="sailpoint.object.Application" name="HR-Contractor"/>
+      </ApplicationRef>
+      <Attributes>
+        <Map>
+          <entry key="costcenter">
+            <value>
+              <List>
+                <String>R02e</String>
+                <String>L05e</String>
+              </List>
+            </value>
+          </entry>
+          <entry key="department" value="Human Resources"/>
+          <entry key="email" value="Chris.Greene@demoexample.com"/>
+          <entry key="employeeId" value="1c2b3a4c"/>
+          <entry key="firstName" value="Chris"/>
+          <entry key="fullName" value="Chris.Greene"/>
+          <entry key="inactiveIdentity" value="FALSE"/>
+          <entry key="lastName" value="Greene"/>
+          <entry key="location" value="Tokyo"/>
+          <entry key="managerId" value="1c2b3a"/>
+          <entry key="region" value="Asia-Pacific"/>
+        </Map>
+      </Attributes>
+    </Link>
+  </Links>
+</Identity>

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE Identity PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<Identity correlated="true" lastRefresh="1684719930851" name="Tina.Ruiz" needsRefresh="true" password="1:ACP:ZpaQSdPBS8C6RD3kZGjoL5ISf8vKVNNxn93yG0n6PIs=">
+  <Attributes>
+    <Map>
+      <entry key="displayName" value="Tina.Ruiz"/>
+    </Map>
+  </Attributes>
+  <Links>
+    <Link displayName="Tina.Ruiz" identity="1c2a3d4a" lastRefresh="1687056813374">
+      <ApplicationRef>
+        <Reference class="sailpoint.object.Application" name="HR-Employee"/>
+      </ApplicationRef>
+      <Attributes>
+        <Map>
+          <entry key="costcenter">
+            <value>
+              <List>
+                <String>R02e</String>
+                <String>L04e</String>
+              </List>
+            </value>
+          </entry>
+          <entry key="department" value="Engineering"/>
+          <entry key="email" value="Tina.Ruiz@demoexample.com"/>
+          <entry key="employeeId" value="1c2a3d4a"/>
+          <entry key="firstName" value="Tina"/>
+          <entry key="fullName" value="Tina.Ruiz"/>
+          <entry key="inactiveIdentity" value="TRUE"/>
+          <entry key="jobtitle" value="QA Analyst"/>
+          <entry key="lastName" value="Ruiz"/>
+          <entry key="location" value="Singapore"/>
+          <entry key="managerId" value="1c2a3d"/>
+          <entry key="region" value="Asia-Pacific"/>
+        </Map>
+      </Attributes>
+    </Link>
+  </Links>
+</Identity>
